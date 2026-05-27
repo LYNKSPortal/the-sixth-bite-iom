@@ -99,6 +99,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="py-24 bg-[#0a0a0a]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="text-sm tracking-widest text-[#c9a961] mb-4">OUR FOOD</div>
+              <h2 className="text-4xl md:text-5xl font-light text-white">A taste of what&apos;s waiting</h2>
+            </div>
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+              {[
+                "708345357_122113591244745440_2199551205051780291_n.jpg",
+                "688824149_122109742010745440_5914503175046393282_n.jpg",
+                "689353545_122110716380745440_366540252959685477_n.jpg",
+                "694459431_122109752618745440_4497850610344960325_n.jpg",
+                "702621121_122112095726745440_4742910413460175683_n.jpg",
+                "702621123_122112095756745440_5071284249193951152_n.jpg",
+                "702996129_122112095714745440_3128567690296679873_n.jpg",
+                "703776651_122112695564745440_7702234441131313472_n.jpg",
+                "704147921_122112695576745440_7509673315337575297_n.jpg",
+                "705277047_122113591256745440_2776381173450473019_n.jpg",
+                "706078218_122113362392745440_2640088751417966549_n.jpg",
+              ].map((filename) => (
+                <div key={filename} className="break-inside-avoid overflow-hidden">
+                  <Image
+                    src={`/${filename}`}
+                    alt="The 6th Bite dish"
+                    width={600}
+                    height={600}
+                    className="w-full object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <Footer />
       </main>
     </div>
