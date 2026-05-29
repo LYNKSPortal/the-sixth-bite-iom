@@ -124,6 +124,15 @@ export default function VisitPage() {
                 </FadeIn>
 
                 <FadeIn delay={150} className="lg:sticky lg:top-32">
+                  <div className="relative w-full aspect-video mb-6 overflow-hidden rounded-sm">
+                    <Image
+                      src="/709012973_4117963651778792_5187342453429802912_n.jpg"
+                      alt="The 6th Bite"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
                   <div className="bg-[#1a1a1a] border border-white/10 p-8 rounded-sm">
                     <h3 className="text-2xl font-light text-white mb-6">Dine in or takeaway</h3>
                     <p className="text-white/60 mb-8 leading-relaxed">
