@@ -62,14 +62,18 @@ export default function ImageSlider({ images, alt }: ImageSliderProps) {
           aria-label="View fullscreen"
         />
 
-        <Image
-          key={current}
-          src={images[current]}
-          alt={`${alt}${multi ? ` — photo ${current + 1}` : ""}`}
-          fill
-          className="object-cover transition-opacity duration-300"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
+        {images.map((src, i) => (
+          <Image
+            key={src}
+            src={src}
+            alt={`${alt}${multi ? ` — photo ${i + 1}` : ""}`}
+            fill
+            className={`object-cover transition-opacity duration-500 ease-in-out ${
+              i === current ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        ))}
 
         {multi && (
           <>
@@ -142,13 +146,18 @@ export default function ImageSlider({ images, alt }: ImageSliderProps) {
             className="relative w-[90vw] h-[90vw] max-w-[80vh] max-h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[current]}
-              alt={`${alt}${multi ? ` — photo ${current + 1}` : ""}`}
-              fill
-              className="object-contain"
-              sizes="90vw"
-            />
+            {images.map((src, i) => (
+              <Image
+                key={src}
+                src={src}
+                alt={`${alt}${multi ? ` — photo ${i + 1}` : ""}`}
+                fill
+                className={`object-contain transition-opacity duration-500 ease-in-out ${
+                  i === current ? "opacity-100" : "opacity-0"
+                }`}
+                sizes="90vw"
+              />
+            ))}
           </div>
 
           {multi && (
