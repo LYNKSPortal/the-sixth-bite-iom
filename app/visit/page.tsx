@@ -124,7 +124,7 @@ export default function VisitPage() {
                 </FadeIn>
 
                 <FadeIn delay={150} className="lg:sticky lg:top-32">
-                  <div className="relative w-full aspect-video mb-6 overflow-hidden rounded-sm">
+                  <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-sm">
                     <Image
                       src="/709012973_4117963651778792_5187342453429802912_n.jpg"
                       alt="The 6th Bite"
