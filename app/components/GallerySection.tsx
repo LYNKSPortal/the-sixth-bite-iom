@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import FadeIn from "./FadeIn";
 
 const images = [
   "708345357_122113591244745440_2199551205051780291_n.jpg",
@@ -50,27 +51,28 @@ export default function GallerySection() {
   return (
     <section className="py-24 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <div className="text-sm tracking-widest text-[#c9a961] mb-4">OUR FOOD</div>
           <h2 className="text-4xl md:text-5xl font-light text-white">A taste of what&apos;s waiting</h2>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
           {images.map((filename, index) => (
-            <button
-              key={filename}
-              onClick={() => open(index)}
-              className="relative aspect-square overflow-hidden group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]"
-            >
-              <Image
-                src={`/${filename}`}
-                alt="The 6th Bite dish"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-            </button>
+            <FadeIn key={filename} delay={Math.min(index * 60, 480)}>
+              <button
+                onClick={() => open(index)}
+                className="relative aspect-square w-full overflow-hidden group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a961]"
+              >
+                <Image
+                  src={`/${filename}`}
+                  alt="The 6th Bite dish"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+              </button>
+            </FadeIn>
           ))}
         </div>
       </div>

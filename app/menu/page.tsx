@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 
 export default function MenuPage() {
   return (
@@ -21,7 +22,7 @@ export default function MenuPage() {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           
-          <div className="relative z-10 px-6 pt-16">
+          <FadeIn className="relative z-10 px-6 pt-16">
             <div className="text-sm tracking-widest text-[#c9a961] mb-6">OUR MENU</div>
             <h1 className="text-5xl md:text-7xl font-light text-white mb-4">
               The 6th Bite
@@ -29,14 +30,14 @@ export default function MenuPage() {
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Explore our selection of Asian comfort food
             </p>
-          </div>
+          </FadeIn>
         </section>
 
         <section className="relative py-32 bg-[#0a0a0a]">
           <div className="w-full px-6 md:px-12 lg:px-20">
 
             <div className="space-y-20">
-              <div>
+              <FadeIn>
                 <h2 className="text-2xl md:text-3xl font-light text-[#c9a961] mb-8 tracking-wide">RICE BOWLS</h2>
                 
                 <div className="space-y-8">
@@ -99,9 +100,9 @@ export default function MenuPage() {
                     <p className="text-white/60 italic">Cantonese-style crispy roast pork belly with crackling skin. Served with rice and greens.</p>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
 
-              <div>
+              <FadeIn delay={100}>
                 <h2 className="text-2xl md:text-3xl font-light text-[#c9a961] mb-8 tracking-wide">UDON</h2>
                 
                 <div className="border-b border-white/10 pb-8">
@@ -122,9 +123,9 @@ export default function MenuPage() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </FadeIn>
 
-              <div>
+              <FadeIn delay={100}>
                 <h2 className="text-2xl md:text-3xl font-light text-[#c9a961] mb-8 tracking-wide">SMALL PLATES</h2>
                 
                 <div className="space-y-8">
@@ -178,9 +179,9 @@ export default function MenuPage() {
                     <p className="text-white/60 italic">Crispy pumpkin croquettes with a soft, naturally sweet centre.</p>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
 
-              <div>
+              <FadeIn delay={100}>
                 <h2 className="text-2xl md:text-3xl font-light text-[#c9a961] mb-8 tracking-wide">SIDES</h2>
                 
                 <div className="space-y-4">
@@ -197,7 +198,7 @@ export default function MenuPage() {
                     <span className="text-[#c9a961]">2.00</span>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </section>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 
 export default function VisitPage() {
   return (
@@ -22,7 +23,7 @@ export default function VisitPage() {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           
-          <div className="relative z-10 px-6 pt-16">
+          <FadeIn className="relative z-10 px-6 pt-16">
             <div className="text-sm tracking-widest text-[#c9a961] mb-6">VISIT US</div>
             <h1 className="text-5xl md:text-7xl font-light text-white mb-4">
               Find The 6th Bite
@@ -30,7 +31,7 @@ export default function VisitPage() {
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Located in the heart of Douglas, we're open for lunch Monday through Friday
             </p>
-          </div>
+          </FadeIn>
         </section>
 
         <section className="relative py-32 bg-[#0a0a0a]">
@@ -38,7 +39,7 @@ export default function VisitPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-20 items-start">
                 
-                <div>
+                <FadeIn>
                   <div className="mb-16">
                     <h2 className="text-5xl md:text-6xl font-light text-white mb-6 leading-tight">
                       Come visit us
@@ -48,7 +49,7 @@ export default function VisitPage() {
                     </p>
                   </div>
 
-                  <div className="space-y-12">
+                  <FadeIn delay={100} className="space-y-12">
                     <div>
                       <div className="flex items-start gap-4 mb-4">
                         <div className="p-3 bg-[#c9a961]/10 border border-[#c9a961]/30 rounded-sm">
@@ -105,9 +106,9 @@ export default function VisitPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </FadeIn>
 
-                  <div className="mt-12 pt-12 border-t border-white/10">
+                  <FadeIn delay={200} className="mt-12 pt-12 border-t border-white/10">
                     <a 
                       href="https://wa.me/447624488331"
                       target="_blank"
@@ -119,10 +120,10 @@ export default function VisitPage() {
                       </svg>
                       MESSAGE US ON WHATSAPP
                     </a>
-                  </div>
-                </div>
+                  </FadeIn>
+                </FadeIn>
 
-                <div className="lg:sticky lg:top-32">
+                <FadeIn delay={150} className="lg:sticky lg:top-32">
                   <div className="bg-[#1a1a1a] border border-white/10 p-8 rounded-sm">
                     <h3 className="text-2xl font-light text-white mb-6">Dine in or takeaway</h3>
                     <p className="text-white/60 mb-8 leading-relaxed">
@@ -135,7 +136,7 @@ export default function VisitPage() {
                       VIEW MENU
                     </Link>
                   </div>
-                </div>
+                </FadeIn>
 
               </div>
             </div>

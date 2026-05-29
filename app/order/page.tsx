@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 
 export default function OrderPage() {
   return (
@@ -22,7 +23,7 @@ export default function OrderPage() {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           
-          <div className="relative z-10 px-6 pt-16">
+          <FadeIn className="relative z-10 px-6 pt-16">
             <div className="text-sm tracking-widest text-[#c9a961] mb-6">ORDER NOW</div>
             <h1 className="text-5xl md:text-7xl font-light text-white mb-4">
               Get your food
@@ -30,25 +31,26 @@ export default function OrderPage() {
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Order online for pickup or delivery
             </p>
-          </div>
+          </FadeIn>
         </section>
 
         <section className="relative py-32 bg-[#0a0a0a]">
           <div className="w-full px-6 md:px-12 lg:px-20">
             <div className="max-w-4xl mx-auto">
               
-              <div className="text-center mb-16">
+              <FadeIn className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
                   How to order
                 </h2>
                 <p className="text-lg text-white/60">
                   Choose your preferred ordering method below
                 </p>
-              </div>
+              </FadeIn>
 
               <div className="grid md:grid-cols-2 gap-8 mb-20">
                 
-                <div className="bg-[#1a1a1a] border border-white/10 p-10 rounded-sm hover:border-[#c9a961]/50 transition-all duration-300">
+                <FadeIn>
+                  <div className="bg-[#1a1a1a] border border-white/10 p-10 rounded-sm hover:border-[#c9a961]/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="inline-block p-4 bg-[#c9a961]/10 border border-[#c9a961]/30 mb-6 rounded-sm">
                       <svg className="w-8 h-8 text-[#c9a961]" fill="currentColor" viewBox="0 0 24 24">
@@ -72,8 +74,10 @@ export default function OrderPage() {
                     </a>
                   </div>
                 </div>
+                </FadeIn>
 
-                <div className="bg-[#1a1a1a] border border-white/10 p-10 rounded-sm hover:border-[#c9a961]/50 transition-all duration-300">
+                <FadeIn delay={150}>
+                  <div className="bg-[#1a1a1a] border border-white/10 p-10 rounded-sm hover:border-[#c9a961]/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="inline-block p-4 bg-[#c9a961]/10 border border-[#c9a961]/30 mb-6 rounded-sm">
                       <svg className="w-8 h-8 text-[#c9a961]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,9 +96,11 @@ export default function OrderPage() {
                     </a>
                   </div>
                 </div>
+                </FadeIn>
 
               </div>
 
+              <FadeIn delay={100}>
               <div className="bg-[#1a1a1a] border border-white/10 p-12 rounded-sm text-center">
                 <h3 className="text-2xl font-light text-white mb-4">Walk-in orders welcome</h3>
                 <p className="text-white/60 mb-6 leading-relaxed">
@@ -104,6 +110,7 @@ export default function OrderPage() {
                   MONDAY–FRIDAY, 11:30–14:30
                 </p>
               </div>
+              </FadeIn>
 
             </div>
           </div>
