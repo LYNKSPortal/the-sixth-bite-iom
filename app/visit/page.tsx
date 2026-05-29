@@ -90,7 +90,8 @@ export default function VisitPage() {
                       <div className="flex items-start gap-4 mb-4">
                         <div className="p-3 bg-[#c9a961]/10 border border-[#c9a961]/30 rounded-sm">
                           <svg className="w-6 h-6 text-[#c9a961]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 21V4" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4l14 4-14 4V4z" />
                           </svg>
                         </div>
                         <div>
