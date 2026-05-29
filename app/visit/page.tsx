@@ -29,7 +29,7 @@ export default function VisitPage() {
               Find The 6th Bite
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Located in the heart of Douglas, we're open for lunch Monday through Friday
+              Located in the heart of Douglas, Isle of Man
             </p>
           </FadeIn>
         </section>
@@ -45,7 +45,7 @@ export default function VisitPage() {
                       Come visit us
                     </h2>
                     <p className="text-xl text-white/60 leading-relaxed">
-                      Located in the heart of Douglas, we're open for lunch Monday through Friday.
+                      Located in the heart of Douglas, Isle of Man.
                     </p>
                   </div>
 
@@ -77,9 +77,26 @@ export default function VisitPage() {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-sm tracking-widest text-[#c9a961] mb-2">OPENING HOURS</h3>
+                          <h3 className="text-sm tracking-widest text-[#c9a961] mb-2">GENERAL OPENING HOURS</h3>
                           <p className="text-lg text-white/80 leading-relaxed">
                             Monday – Friday<br />
+                            11:30 AM – 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="p-3 bg-[#c9a961]/10 border border-[#c9a961]/30 rounded-sm">
+                          <svg className="w-6 h-6 text-[#c9a961]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-sm tracking-widest text-[#c9a961] mb-2">TT OPENING HOURS</h3>
+                          <p className="text-lg text-white/80 leading-relaxed">
+                            Monday – Sunday<br />
                             11:30 AM – 2:30 PM
                           </p>
                         </div>
