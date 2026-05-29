@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { href: "/", label: "HOMEPAGE" },
   { href: "/menu", label: "OUR MENU" },
+  { href: "/showcase", label: "SHOWCASE" },
   { href: "/visit", label: "VISIT US" },
   { href: "/order", label: "ORDER NOW" },
 ];
@@ -28,6 +29,7 @@ export default function Header() {
             <div className="hidden md:flex gap-8 text-sm tracking-wide flex-1">
               <Link href="/" className="text-white hover:text-[#c9a961] transition-colors">HOMEPAGE</Link>
               <Link href="/menu" className="text-white hover:text-[#c9a961] transition-colors">OUR MENU</Link>
+              <Link href="/showcase" className="text-white hover:text-[#c9a961] transition-colors">SHOWCASE</Link>
               <Link href="/visit" className="text-white hover:text-[#c9a961] transition-colors">VISIT US</Link>
             </div>
 
