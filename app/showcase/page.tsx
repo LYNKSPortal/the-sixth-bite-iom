@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FadeIn from "../components/FadeIn";
+import ImageSlider from "../components/ImageSlider";
 
 const dishes = [
   {
@@ -116,31 +117,7 @@ export default function ShowcasePage() {
                 <FadeIn key={dish.name} delay={100}>
                   <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                    {dish.images.length === 1 ? (
-                      <div className="relative w-full aspect-square overflow-hidden rounded-sm">
-                        <Image
-                          src={dish.images[0]}
-                          alt={dish.name}
-                          fill
-                          className="object-cover transition-transform duration-700 hover:scale-105"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                      </div>
-                    ) : (
-                      <div className="grid grid-cols-2 gap-3">
-                        {dish.images.map((src, i) => (
-                          <div key={i} className="relative w-full aspect-square overflow-hidden rounded-sm">
-                            <Image
-                              src={src}
-                              alt={`${dish.name} ${i + 1}`}
-                              fill
-                              className="object-cover transition-transform duration-700 hover:scale-105"
-                              sizes="(max-width: 1024px) 50vw, 25vw"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    )}
+                    <ImageSlider images={dish.images} alt={dish.name} />
 
                     <div className="flex flex-col justify-center">
                       <div className="text-sm tracking-widest text-[#c9a961] mb-4">
