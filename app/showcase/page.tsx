@@ -6,6 +6,15 @@ import FadeIn from "../components/FadeIn";
 
 const dishes = [
   {
+    name: "Sweet & Sour Chicken",
+    tag: "RICE BOWLS",
+    description:
+      "Treat yourself to our vibrant, mouth-watering Sweet & Sour Chicken. Made with love and packed with authentic flavors, it's a classic that never disappoints. 🍍\n\nWhether you're catching up with friends in our dining room or taking it home to enjoy on the sofa, we've got your cravings sorted.",
+    detail: "Served with rice and greens",
+    price: "£11.95",
+    image: "/sweet-and-sour-chicken.jpg",
+  },
+  {
     name: "Golden Katsu Curry",
     tag: "SIGNATURE DISH",
     description:
@@ -115,9 +124,13 @@ export default function ShowcasePage() {
                       <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
                         {dish.name}
                       </h2>
-                      <p className="text-white/60 text-lg leading-relaxed mb-6">
-                        {dish.description}
-                      </p>
+                      <div className="space-y-4 mb-6">
+                        {dish.description.split("\n\n").map((para, i) => (
+                          <p key={i} className="text-white/60 text-lg leading-relaxed">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
                       <p className="text-sm text-white/40 italic mb-8">
                         {dish.detail}
                       </p>
