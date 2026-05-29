@@ -6,13 +6,58 @@ import FadeIn from "../components/FadeIn";
 
 const dishes = [
   {
-    name: "Sweet & Sour Chicken",
+    name: "Golden Katsu Curry",
+    tag: "SIGNATURE DISH",
+    description:
+      "Our most-loved dish. A rich, deeply savoury Japanese curry sauce poured over a perfectly crispy panko-breaded cutlet, served alongside steamed rice, pickled vegetables and fresh greens. Choose from chicken, pork or our pumpkin croquette for a vegetarian option.",
+    detail: "Available as Chicken Katsu, Pork Katsu or Pumpkin Croquette",
+    price: "From £12.00",
+    image: "/708345357_122113591244745440_2199551205051780291_n.jpg",
+  },
+  {
+    name: "Korean Fried Chicken",
+    tag: "SMALL PLATES",
+    description:
+      "Crispy double-fried chicken tossed in your choice of sauce. Our Sweet & Spicy Gochujang glaze brings the heat with a sticky, bold kick, while the Soy Garlic version is rich, umami and deeply satisfying. Impossible to stop at one.",
+    detail: "Choice of Sweet & Spicy (Gochujang) or Soy Garlic",
+    price: "£6.50",
+    image: "/702621121_122112095726745440_4742910413460175683_n.jpg",
+  },
+  {
+    name: "Char Siu Bowl",
     tag: "RICE BOWLS",
     description:
-      "Treat yourself to our vibrant, mouth-watering Sweet & Sour Chicken. Made with love and packed with authentic flavors, it's a classic that never disappoints. 🍍\n\nWhether you're catching up with friends in our dining room or taking it home to enjoy on the sofa, we've got your cravings sorted.",
+      "Slow-roasted Cantonese BBQ pork glazed in a rich soy, honey and five-spice sauce until caramelised and tender. Served over steamed rice with seasonal greens and a soft-boiled egg. One of our most comforting bowls on the menu.",
+    detail: "Served with rice, greens and soft egg",
+    price: "£12.00",
+    image: "/703776651_122112695564745440_7702234441131313472_n.jpg",
+  },
+  {
+    name: "Curry Udon",
+    tag: "UDON",
+    description:
+      "Thick, chewy udon noodles swimming in our signature Japanese curry broth — warming, fragrant and full of depth. Topped with your choice of protein and served with fresh greens. The ultimate comfort noodle dish.",
+    detail: "Available with Chicken Katsu, Pork Katsu or Pumpkin Croquette",
+    price: "From £12.00",
+    image: "/704147921_122112695576745440_7509673315337575297_n.jpg",
+  },
+  {
+    name: "Gyoza",
+    tag: "SMALL PLATES",
+    description:
+      "Pan-fried dumplings with a golden, crispy base and a tender steamed top. Filled with your choice of chicken & vegetable, pork or vegetable, and served with a light soy dipping sauce. A perfect starter or side.",
+    detail: "Choice of Chicken & Veg, Pork or Vegetable",
+    price: "£5.50",
+    image: "/705277047_122113591256745440_2776381173450473019_n.jpg",
+  },
+  {
+    name: "Crispy Roast Pork Bowl",
+    tag: "RICE BOWLS",
+    description:
+      "Cantonese-style roast pork belly with irresistibly crispy crackling skin and tender, flavourful meat underneath. Served with fragrant steamed rice, seasonal greens and our house sauce. A proper feast in a bowl.",
     detail: "Served with rice and greens",
-    price: "£11.95",
-    image: "/sweet-and-sour-chicken.jpg",
+    price: "£11.50",
+    image: "/706078218_122113362392745440_2640088751417966549_n.jpg",
   },
 ];
 
@@ -70,13 +115,9 @@ export default function ShowcasePage() {
                       <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
                         {dish.name}
                       </h2>
-                      <div className="space-y-4 mb-6">
-                        {dish.description.split("\n\n").map((para, i) => (
-                          <p key={i} className="text-white/60 text-lg leading-relaxed">
-                            {para}
-                          </p>
-                        ))}
-                      </div>
+                      <p className="text-white/60 text-lg leading-relaxed mb-6">
+                        {dish.description}
+                      </p>
                       <p className="text-sm text-white/40 italic mb-8">
                         {dish.detail}
                       </p>
