@@ -23,7 +23,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/70"></div>
           </div>
           
-          <div className="relative z-10 px-6 max-w-5xl">
+          <div className="relative z-10 px-6 max-w-5xl mt-24 md:mt-0">
             <div className="mb-8">
               <div className="inline-block px-6 py-2 border border-[#c9a961]/30 text-[#c9a961] text-sm tracking-widest mb-8">
                 ASIAN FUSION COMFORT FOOD
