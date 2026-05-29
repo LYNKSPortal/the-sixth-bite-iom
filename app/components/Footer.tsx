@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import FadeIn from "./FadeIn";
 
 export default function Footer() {
   return (
     <footer className="relative py-16 bg-[#c9a961] border-t border-[#b89851]">
       <div className="w-full px-6 md:px-12 lg:px-20">
-        <div className="text-center">
+        <FadeIn className="text-center">
           <Link href="/" className="inline-block mb-6">
             <Image 
               src="/logos/dark-version-v2.png" 
@@ -26,7 +27,7 @@ export default function Footer() {
               © 2026 THE 6TH BITE. ALL RIGHTS RESERVED.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </footer>
   );

@@ -22,30 +22,39 @@ export default function FadeIn({
     if (!el) return;
 
     const translate = {
-      up: "translateY(32px)",
-      down: "translateY(-32px)",
-      left: "translateX(32px)",
-      right: "translateX(-32px)",
+      up: "translateY(28px)",
+      down: "translateY(-28px)",
+      left: "translateX(28px)",
+      right: "translateX(-28px)",
       none: "none",
     }[direction];
 
     el.style.opacity = "0";
     el.style.transform = translate;
-    el.style.transition = `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.style.opacity = "1";
-          el.style.transform = "none";
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.12 }
-    );
+    let observer: IntersectionObserver;
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    const raf = requestAnimationFrame(() => {
+      el.style.transition = `opacity 0.75s ease ${delay}ms, transform 0.75s ease ${delay}ms`;
+
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.style.opacity = "1";
+            el.style.transform = "none";
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.05 }
+      );
+
+      observer.observe(el);
+    });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      observer?.disconnect();
+    };
   }, [delay, direction]);
 
   return (
